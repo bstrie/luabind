@@ -14,7 +14,7 @@ fn main() {
     let ret2 = lua_pcallk(L, 0, -1, 0, 0, ptr::null());
     match (ret1, ret2) {
         (0, 0) => (),
-        _ => fail
+        _ => fail!()
     }
 
     str::as_c_str("foo", |s| lua_getglobal(L, s));
