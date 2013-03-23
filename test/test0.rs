@@ -1,10 +1,10 @@
-extern mod rust_lua;
-extern mod rust_lualib;
-extern mod rust_lauxlib;
+extern mod luah_lua52;
+extern mod lualibh_lua52;
+extern mod lauxlibh_lua52;
 
-use rust_lua::*;
-use rust_lualib::*;
-use rust_lauxlib::*;
+use luah_lua52::*;
+use lualibh_lua52::*;
+use lauxlibh_lua52::*;
 
 fn main() {
     let L = luaL_newstate();
