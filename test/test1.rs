@@ -23,6 +23,6 @@ fn main() {
     lua_pushinteger(L, 3);
 
     lua_callk(L, 2, 1, 0, ptr::null());
-    let ret3 = lua_tointegerx(L, -1, ptr::null());
+    let ret3 = lua_tointegerx(L, -1, ptr::mut_null());
     io::println(fmt!("Result: %?", ret3));
 }
